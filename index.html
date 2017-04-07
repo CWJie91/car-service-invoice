@@ -6,7 +6,20 @@
 <body>
 	<form onsubmit="false;">
 		Invoice Capture: <br>
-		<input type="file" accept="image/" capture="camera">
+		<input type="file" accept="image/" capture="camera" id="captureInvoice">
 	</form>
 </body>
+<script type="text/javascript">
+	(function(){
+		var uploadBox = document.getElementById('captureInvoice');
+		uploadBox.addEventListener("change", handleFiles, false);
+
+	})();
+
+	function handleFiles() {
+		var fileList = this.files;
+			console.log(fileList);
+
+	}
+</script>
 </html>
